@@ -1,21 +1,30 @@
-# Clash Automator Configuration
+# --- Clash Automator Configuration (Template) ---
+# Rename this file to 'config.yaml' and fill in your details.
 
-# API URL for Clash External Controller (Default: http://127.0.0.1:9097)
+# 1. API Connection
+# Default Clash External Controller URL (found in Settings)
 clash_api_url: "http://127.0.0.1:9097"
-
-# API Secret (Leave empty if none)
+# API Secret (found in Settings / "API Key", usually empty or "123456")
 clash_api_secret: ""
 
-# Path to your Clash Configuration YAML file
-# Example: "C:/Users/YourName/.config/clash/config.yaml"
-# You can use absolute paths.
+# 2. Files
+# Full absolute path to your Clash Profile YAML
+# Windows Example: "C:\\Users\\YOUR_NAME\\AppData\\Roaming\\io.github.clash-verge-rev.clash-verge-rev\\profiles\\your_profile.yaml"
+# Mac/Linux Example: "/Users/yourname/.config/clash/config.yaml"
 yaml_path: ""
 
-# Selector to switch (Default: "GLOBAL")
-# Usually "GLOBAL" or "Proxy"
+# Output file suffix (e.g., config_checked.yaml)
+output_suffix: "_checked"
+
+# 3. Automation Settings
+# How the script views the web (true = invisible, false = see the browser)
+headless: true
+
+# The "Selector" group in Clash to control (usually "GLOBAL" or "Proxy")
 selector_name: "GLOBAL"
 
-# Keywords to skip (Nodes containing these will be ignored)
+# 4. Filters
+# Keywords to skip testing (e.g., status info nodes)
 skip_keywords:
   - "剩余"
   - "到期"
@@ -25,7 +34,5 @@ skip_keywords:
   - "更新"
   - "公告"
   - "重置"
-
-# Other Settings
-headless: false  # Set to true to hide browser window
-output_suffix: "_checked"
+  - "Expire" 
+  - "Traffic"

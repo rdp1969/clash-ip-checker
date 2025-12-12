@@ -35,9 +35,11 @@ An intelligent automation tool for **Clash Verge** (and compatible cores) that a
     playwright install chromium
     ```
 
-3.  **Prepare a Config File**
-    - Copy `config.yaml.example` to `config.yaml` (Optional, or edit script directly for now).
-    - Ensure your Clash External Controller is running (Default: `127.0.0.1:9097`).
+3.  **Configure**
+    - Duplicate `config.yaml.example` and rename it to `config.yaml`.
+    - Edit `config.yaml` and fill in your details:
+        - `yaml_path`: The absolute path to your current Clash configuration file.
+        - `clash_api_secret`: Your API key (if any).
 
 ## 🚀 Usage
 
